@@ -29,6 +29,7 @@ export default [
         performance: 'readonly',
         requestAnimationFrame: 'readonly',
         cancelAnimationFrame: 'readonly',
+        Image: 'readonly',
       },
       parserOptions: {
         ecmaVersion: 'latest',

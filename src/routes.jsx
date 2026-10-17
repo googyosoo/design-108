@@ -15,6 +15,7 @@ const PracticeHubPage = lazy(() => import('./pages/PracticeHub.jsx').then((m) =>
 const QuizRunnerPage = lazy(() => import('./pages/QuizRunner.jsx').then((m) => ({ default: m.QuizRunnerPage })))
 const ToolsHubPage = lazy(() => import('./pages/ToolsHub.jsx').then((m) => ({ default: m.ToolsHubPage })))
 const PromptBuilderPage = lazy(() => import('./pages/PromptBuilder.jsx').then((m) => ({ default: m.PromptBuilderPage })))
+const DiagnosePage = lazy(() => import('./pages/Diagnose.jsx').then((m) => ({ default: m.DiagnosePage })))
 const TeachHubPage = lazy(() => import('./pages/TeachHub.jsx').then((m) => ({ default: m.TeachHubPage })))
 const TeachModulePage = lazy(() => import('./pages/TeachModule.jsx').then((m) => ({ default: m.TeachModulePage })))
 const MyPage = lazy(() => import('./pages/My.jsx').then((m) => ({ default: m.MyPage })))
@@ -127,11 +128,9 @@ export const router = createBrowserRouter([
       {
         path: 'tools/diagnose',
         element: (
-          <PlaceholderPage
-            title="AI 디자인 진단 (Diagnose)"
-            phase="6"
-            description="수업자료/웹앱 캡처를 올리면 15초 안에 3대 개선점과 원리 링크를 제시합니다."
-          />
+          <PageSuspense>
+            <DiagnosePage />
+          </PageSuspense>
         ),
       },
       {
