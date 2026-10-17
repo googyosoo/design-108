@@ -8,6 +8,15 @@ import { PlaceholderPage, NotFoundPage } from './pages/Placeholder.jsx'
 const HomePage = lazy(() => import('./pages/Home.jsx').then((m) => ({ default: m.HomePage })))
 const LibraryPage = lazy(() => import('./pages/Library.jsx').then((m) => ({ default: m.LibraryPage })))
 const EffectDetailPage = lazy(() => import('./pages/EffectDetail.jsx').then((m) => ({ default: m.EffectDetailPage })))
+const PresentDeckPage = lazy(() => import('./pages/PresentDeck.jsx').then((m) => ({ default: m.PresentDeckPage })))
+const CasesPage = lazy(() => import('./pages/Cases.jsx').then((m) => ({ default: m.CasesPage })))
+const CaseStudioPage = lazy(() => import('./pages/CaseStudio.jsx').then((m) => ({ default: m.CaseStudioPage })))
+const PracticeHubPage = lazy(() => import('./pages/PracticeHub.jsx').then((m) => ({ default: m.PracticeHubPage })))
+const QuizRunnerPage = lazy(() => import('./pages/QuizRunner.jsx').then((m) => ({ default: m.QuizRunnerPage })))
+const ToolsHubPage = lazy(() => import('./pages/ToolsHub.jsx').then((m) => ({ default: m.ToolsHubPage })))
+const PromptBuilderPage = lazy(() => import('./pages/PromptBuilder.jsx').then((m) => ({ default: m.PromptBuilderPage })))
+const TeachHubPage = lazy(() => import('./pages/TeachHub.jsx').then((m) => ({ default: m.TeachHubPage })))
+const TeachModulePage = lazy(() => import('./pages/TeachModule.jsx').then((m) => ({ default: m.TeachModulePage })))
 const MyPage = lazy(() => import('./pages/My.jsx').then((m) => ({ default: m.MyPage })))
 const DevUiPage = lazy(() => import('./pages/DevUi.jsx').then((m) => ({ default: m.DevUiPage })))
 
@@ -62,71 +71,57 @@ export const router = createBrowserRouter([
       {
         path: 'effect/:code/present',
         element: (
-          <PlaceholderPage
-            title="원리 발표 모드"
-            phase="5"
-            description="교실 프로젝터 및 연수 강의용 대화면 전용 슬라이드 덱입니다."
-          />
+          <PageSuspense>
+            <PresentDeckPage />
+          </PageSuspense>
         ),
       },
       {
         path: 'cases',
         element: (
-          <PlaceholderPage
-            title="실전 사례 목록 (11)"
-            phase="5"
-            description="학습지, 슬라이드, 웹앱, 다크 패턴 분석 등 11개 실전 리메이크 사례입니다."
-          />
+          <PageSuspense>
+            <CasesPage />
+          </PageSuspense>
         ),
       },
       {
         path: 'cases/:caseCode',
         element: (
-          <PlaceholderPage
-            title="사례 스튜디오"
-            phase="5"
-            description="Before/After 전환 및 인터랙티브 핫스팟 탐색 모드입니다."
-          />
+          <PageSuspense>
+            <CaseStudioPage />
+          </PageSuspense>
         ),
       },
       {
         path: 'practice',
         element: (
-          <PlaceholderPage
-            title="연습 허브 (Practice)"
-            phase="5"
-            description="플래시 카드, 4지선다 퀴즈, 윤리/다크패턴 판별, 영어 퀴즈 4종을 제공합니다."
-          />
+          <PageSuspense>
+            <PracticeHubPage />
+          </PageSuspense>
         ),
       },
       {
         path: 'practice/:mode',
         element: (
-          <PlaceholderPage
-            title="퀴즈 진행 (Quiz)"
-            phase="5"
-            description="랜덤 생성되는 10문항 인터랙티브 퀴즈 화면입니다."
-          />
+          <PageSuspense>
+            <QuizRunnerPage />
+          </PageSuspense>
         ),
       },
       {
         path: 'tools',
         element: (
-          <PlaceholderPage
-            title="도구 허브 (Tools)"
-            phase="5"
-            description="프롬프트 빌더, AI 디자인 진단, 수업 활용 도구를 한곳에 모았습니다."
-          />
+          <PageSuspense>
+            <ToolsHubPage />
+          </PageSuspense>
         ),
       },
       {
         path: 'tools/builder',
         element: (
-          <PlaceholderPage
-            title="프롬프트 빌더 (Prompt Builder)"
-            phase="5"
-            description="매체와 목적을 고르면 AI 지시문과 체크리스트 마크다운을 3분 안에 생성합니다."
-          />
+          <PageSuspense>
+            <PromptBuilderPage />
+          </PageSuspense>
         ),
       },
       {
@@ -142,21 +137,17 @@ export const router = createBrowserRouter([
       {
         path: 'teach',
         element: (
-          <PlaceholderPage
-            title="수업 활용 허브 (Teach)"
-            phase="5"
-            description="고등 영어 포스터, 미디어 리터러시, 교원 연수 웹앱 고도화 등 4종 수업 모듈입니다."
-          />
+          <PageSuspense>
+            <TeachHubPage />
+          </PageSuspense>
         ),
       },
       {
         path: 'teach/:moduleId',
         element: (
-          <PlaceholderPage
-            title="수업 모듈 상세"
-            phase="5"
-            description="차시별 지도안, 인쇄용 활동지, 명시적 루브릭을 제공합니다."
-          />
+          <PageSuspense>
+            <TeachModulePage />
+          </PageSuspense>
         ),
       },
       {

@@ -66,8 +66,10 @@ async function run() {
     await send('Page.enable')
     await send('Network.enable')
     const targets = [
-      { url: 'http://localhost:4173/effect/001', prefix: 'phase4-demo-fitts' },
-      { url: 'http://localhost:4173/effect/053', prefix: 'phase4-illusion-muller' },
+      { url: 'http://localhost:4173/cases/CASE01', prefix: 'phase5-case-studio' },
+      { url: 'http://localhost:4173/practice', prefix: 'phase5-practice-hub' },
+      { url: 'http://localhost:4173/tools/builder', prefix: 'phase5-prompt-builder' },
+      { url: 'http://localhost:4173/teach/M1-english-poster', prefix: 'phase5-teach-module' },
     ]
 
     for (const target of targets) {
