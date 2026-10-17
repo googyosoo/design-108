@@ -18,6 +18,8 @@ export default [
         clearTimeout: 'readonly',
         fetch: 'readonly',
         process: 'readonly',
+        Buffer: 'readonly',
+        WebSocket: 'readonly',
       },
       parserOptions: {
         ecmaVersion: 'latest',
