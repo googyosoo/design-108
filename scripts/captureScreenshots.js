@@ -66,9 +66,8 @@ async function run() {
     await send('Page.enable')
     await send('Network.enable')
     const targets = [
-      { url: 'http://localhost:4173/', prefix: 'phase3-home' },
-      { url: 'http://localhost:4173/library', prefix: 'phase3-lib' },
-      { url: 'http://localhost:4173/effect/001', prefix: 'phase3-detail' },
+      { url: 'http://localhost:4173/effect/001', prefix: 'phase4-demo-fitts' },
+      { url: 'http://localhost:4173/effect/053', prefix: 'phase4-illusion-muller' },
     ]
 
     for (const target of targets) {

@@ -5,7 +5,7 @@ import { useProgress } from '../hooks/useProgress.js'
 import { Principle } from '../components/xray/Principle.jsx'
 import { Toast } from '../components/ui/Toast.jsx'
 import { EffectHeader } from '../components/effect/EffectHeader.jsx'
-import { DemoPlaceholder } from '../components/demos/DemoPlaceholder.jsx'
+import { EffectDemo } from '../components/demos/index.jsx'
 import { WhySection } from '../components/effect/WhySection.jsx'
 import { ApplyTabs } from '../components/effect/ApplyTabs.jsx'
 import { DoDont } from '../components/effect/DoDont.jsx'
@@ -58,7 +58,7 @@ export function EffectDetailPage() {
         <EffectHeader effect={effect} />
 
         {/* ② 30초 인터랙티브 체험 */}
-        <DemoPlaceholder effect={effect} />
+        <EffectDemo effect={effect} />
 
         {/* ③ 왜 그럴까? */}
         <WhySection effect={effect} />
