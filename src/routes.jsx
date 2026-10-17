@@ -1,7 +1,34 @@
+/* eslint-disable react-refresh/only-export-components */
+import { lazy, Suspense } from 'react'
 import { createBrowserRouter } from 'react-router-dom'
 import { AppShell } from './components/layout/AppShell.jsx'
+import { Skeleton } from './components/ui/Skeleton.jsx'
 import { PlaceholderPage, NotFoundPage } from './pages/Placeholder.jsx'
-import { DevUiPage } from './pages/DevUi.jsx'
+
+const HomePage = lazy(() => import('./pages/Home.jsx').then((m) => ({ default: m.HomePage })))
+const LibraryPage = lazy(() => import('./pages/Library.jsx').then((m) => ({ default: m.LibraryPage })))
+const EffectDetailPage = lazy(() => import('./pages/EffectDetail.jsx').then((m) => ({ default: m.EffectDetailPage })))
+const MyPage = lazy(() => import('./pages/My.jsx').then((m) => ({ default: m.MyPage })))
+const DevUiPage = lazy(() => import('./pages/DevUi.jsx').then((m) => ({ default: m.DevUiPage })))
+
+function PageSuspense({ children }) {
+  return (
+    <Suspense
+      fallback={
+        <div className="mx-auto max-w-5xl p-6 space-y-6" aria-busy="true" aria-label="페이지 로딩 중">
+          <Skeleton variant="text" width="40%" height={32} />
+          <Skeleton variant="rectangular" height={220} />
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <Skeleton variant="rectangular" height={140} />
+            <Skeleton variant="rectangular" height={140} />
+          </div>
+        </div>
+      }
+    >
+      {children}
+    </Suspense>
+  )
+}
 
 export const router = createBrowserRouter([
   {
@@ -11,31 +38,25 @@ export const router = createBrowserRouter([
       {
         index: true,
         element: (
-          <PlaceholderPage
-            title="홈 (Home)"
-            phase="3"
-            description="오늘의 원리, 빠른 상황별 찾기, 내 진도 링, 실전 사례 핫링크를 제공합니다."
-          />
+          <PageSuspense>
+            <HomePage />
+          </PageSuspense>
         ),
       },
       {
         path: 'library',
         element: (
-          <PlaceholderPage
-            title="원리 도감 (108)"
-            phase="3"
-            description="108개 디자인 심리 원리를 4대 챕터와 태그, 초성 검색으로 탐색합니다."
-          />
+          <PageSuspense>
+            <LibraryPage />
+          </PageSuspense>
         ),
       },
       {
         path: 'effect/:code',
         element: (
-          <PlaceholderPage
-            title="원리 상세 (Detail)"
-            phase="3"
-            description="한 줄 정의, 왜 작동하는가, 30초 체험, 학교 현장 Do & Don't, 프롬프트 복사를 제공합니다."
-          />
+          <PageSuspense>
+            <EffectDetailPage />
+          </PageSuspense>
         ),
       },
       {
@@ -141,11 +162,9 @@ export const router = createBrowserRouter([
       {
         path: 'my',
         element: (
-          <PlaceholderPage
-            title="내 도감 (My Studio)"
-            phase="3"
-            description="즐겨찾기 보관함, 108개 수집 달성률 링, 퀴즈 오답 복습장입니다."
-          />
+          <PageSuspense>
+            <MyPage />
+          </PageSuspense>
         ),
       },
       {
@@ -160,7 +179,11 @@ export const router = createBrowserRouter([
       },
       {
         path: 'dev/ui',
-        element: <DevUiPage />,
+        element: (
+          <PageSuspense>
+            <DevUiPage />
+          </PageSuspense>
+        ),
       },
       {
         path: '*',

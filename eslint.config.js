@@ -20,6 +20,12 @@ export default [
         process: 'readonly',
         Buffer: 'readonly',
         WebSocket: 'readonly',
+        Event: 'readonly',
+        CustomEvent: 'readonly',
+        URLSearchParams: 'readonly',
+        Blob: 'readonly',
+        URL: 'readonly',
+        FileReader: 'readonly',
       },
       parserOptions: {
         ecmaVersion: 'latest',

@@ -65,28 +65,37 @@ async function run() {
 
     await send('Page.enable')
     await send('Network.enable')
-    await send('Page.navigate', { url: 'http://localhost:4173/dev/ui' })
-    await new Promise((resolve) => setTimeout(resolve, 1500))
-
-    const viewports = [
-      { name: 'phase1-360.png', width: 360, height: 800 },
-      { name: 'phase1-768.png', width: 768, height: 1024 },
-      { name: 'phase1-1280.png', width: 1280, height: 800 },
+    const targets = [
+      { url: 'http://localhost:4173/', prefix: 'phase3-home' },
+      { url: 'http://localhost:4173/library', prefix: 'phase3-lib' },
+      { url: 'http://localhost:4173/effect/001', prefix: 'phase3-detail' },
     ]
 
-    for (const vp of viewports) {
-      await send('Emulation.setDeviceMetricsOverride', {
-        width: vp.width,
-        height: vp.height,
-        deviceScaleFactor: 1,
-        mobile: vp.width < 1024,
-      })
-      await new Promise((resolve) => setTimeout(resolve, 500))
+    for (const target of targets) {
+      await send('Page.navigate', { url: target.url })
+      await new Promise((resolve) => setTimeout(resolve, 1500))
 
-      const ss = await send('Page.captureScreenshot', { format: 'png' })
-      const filePath = path.join(imgDir, vp.name)
-      fs.writeFileSync(filePath, Buffer.from(ss.data, 'base64'))
-      console.log(`[capture] 저장 완료: ${vp.name} (${vp.width}x${vp.height})`)
+      const viewports = [
+        { suffix: '360.png', width: 360, height: 800 },
+        { suffix: '768.png', width: 768, height: 1024 },
+        { suffix: '1280.png', width: 1280, height: 800 },
+      ]
+
+      for (const vp of viewports) {
+        await send('Emulation.setDeviceMetricsOverride', {
+          width: vp.width,
+          height: vp.height,
+          deviceScaleFactor: 1,
+          mobile: vp.width < 1024,
+        })
+        await new Promise((resolve) => setTimeout(resolve, 500))
+
+        const ss = await send('Page.captureScreenshot', { format: 'png' })
+        const fileName = `${target.prefix}-${vp.suffix}`
+        const filePath = path.join(imgDir, fileName)
+        fs.writeFileSync(filePath, Buffer.from(ss.data, 'base64'))
+        console.log(`[capture] 저장 완료: ${fileName} (${vp.width}x${vp.height})`)
+      }
     }
 
     ws.close()
