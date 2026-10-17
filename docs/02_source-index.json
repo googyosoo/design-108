@@ -1,0 +1,1346 @@
+{
+ "_readme": "원본 사진(책 촬영본) ↔ 효과/사례 매핑 시드. sourceImage는 내용 파악용 참고 경로이며 앱에 포함·배포 금지. demoType·ethicsLevel은 초안(검수 대상).",
+ "book": {
+  "title": "디자인 심리 108",
+  "subtitle": "광고, UX/UI, 브랜딩에 바로 쓰는",
+  "author": "321web(미쓰이 마사유키)",
+  "translator": "김현미",
+  "publisher": "시프트"
+ },
+ "sourceFolder": "../../",
+ "sourceFolderNote": "이 JSON 파일(design-psych-108/docs/) 기준 원본 사진 폴더의 상대 경로",
+ "coverImage": "20261017_122705.jpg",
+ "chapters": [
+  {
+   "id": "psychology",
+   "no": 1,
+   "nameKo": "디자인에 쓰는 심리 효과",
+   "range": [
+    1,
+    52
+   ]
+  },
+  {
+   "id": "illusion",
+   "no": 2,
+   "nameKo": "착시 효과",
+   "range": [
+    53,
+    78
+   ]
+  },
+  {
+   "id": "color",
+   "no": 3,
+   "nameKo": "색채 효과",
+   "range": [
+    79,
+    88
+   ]
+  },
+  {
+   "id": "layout",
+   "no": 4,
+   "nameKo": "레이아웃·UX 법칙",
+   "range": [
+    89,
+    108
+   ]
+  },
+  {
+   "id": "cases",
+   "no": 5,
+   "nameKo": "실전 사례",
+   "range": [
+    "CASE01",
+    "CASE11"
+   ]
+  }
+ ],
+ "effects": [
+  {
+   "id": 1,
+   "code": "001",
+   "chapter": "psychology",
+   "nameKo": "쿨레쇼프 효과",
+   "nameEn": "Kuleshov Effect",
+   "demoType": "scenarioQuiz",
+   "ethicsLevel": "safe",
+   "sourceImage": "20261017_122729.jpg"
+  },
+  {
+   "id": 2,
+   "code": "002",
+   "chapter": "psychology",
+   "nameKo": "샤르팡티에 효과",
+   "nameEn": "Charpentier Effect",
+   "demoType": "choiceLab",
+   "ethicsLevel": "caution",
+   "sourceImage": "20261017_122732.jpg"
+  },
+  {
+   "id": 3,
+   "code": "003",
+   "chapter": "psychology",
+   "nameKo": "베이비페이스 효과",
+   "nameEn": "Babyface Effect",
+   "demoType": "compareToggle",
+   "ethicsLevel": "safe",
+   "sourceImage": "20261017_122739.jpg"
+  },
+  {
+   "id": 4,
+   "code": "004",
+   "chapter": "psychology",
+   "nameKo": "베블런 효과",
+   "nameEn": "Veblen Effect",
+   "demoType": "choiceLab",
+   "ethicsLevel": "caution",
+   "sourceImage": "20261017_122743.jpg"
+  },
+  {
+   "id": 5,
+   "code": "005",
+   "chapter": "psychology",
+   "nameKo": "헤일로 효과",
+   "nameEn": "Halo Effect",
+   "demoType": "scenarioQuiz",
+   "ethicsLevel": "caution",
+   "sourceImage": "20261017_122752.jpg"
+  },
+  {
+   "id": 6,
+   "code": "006",
+   "chapter": "psychology",
+   "nameKo": "화이트 스페이스 효과",
+   "nameEn": "Whitespace Effect",
+   "demoType": "compareToggle",
+   "ethicsLevel": "safe",
+   "sourceImage": "20261017_122755.jpg"
+  },
+  {
+   "id": 7,
+   "code": "007",
+   "chapter": "psychology",
+   "nameKo": "시선 유도 효과",
+   "nameEn": "Eye-Guiding Effect",
+   "demoType": "gazeMap",
+   "ethicsLevel": "safe",
+   "sourceImage": "20261017_122817.jpg"
+  },
+  {
+   "id": 8,
+   "code": "008",
+   "chapter": "psychology",
+   "nameKo": "포인팅 효과",
+   "nameEn": "Pointing Effect",
+   "demoType": "gazeMap",
+   "ethicsLevel": "safe",
+   "sourceImage": "20261017_122820.jpg"
+  },
+  {
+   "id": 9,
+   "code": "009",
+   "chapter": "psychology",
+   "nameKo": "화살표 효과",
+   "nameEn": "Arrow Effect",
+   "demoType": "gazeMap",
+   "ethicsLevel": "safe",
+   "sourceImage": "20261017_122831.jpg"
+  },
+  {
+   "id": 10,
+   "code": "010",
+   "chapter": "psychology",
+   "nameKo": "대비 효과",
+   "nameEn": "Contrast Effect",
+   "demoType": "compareToggle",
+   "ethicsLevel": "safe",
+   "sourceImage": "20261017_122838.jpg"
+  },
+  {
+   "id": 11,
+   "code": "011",
+   "chapter": "psychology",
+   "nameKo": "터널 효과",
+   "nameEn": "Tunnel Effect",
+   "demoType": "gazeMap",
+   "ethicsLevel": "safe",
+   "sourceImage": "20261017_122845.jpg"
+  },
+  {
+   "id": 12,
+   "code": "012",
+   "chapter": "psychology",
+   "nameKo": "밴드왜건 효과",
+   "nameEn": "Bandwagon Effect",
+   "demoType": "scenarioQuiz",
+   "ethicsLevel": "caution",
+   "sourceImage": "20261017_122849.jpg"
+  },
+  {
+   "id": 13,
+   "code": "013",
+   "chapter": "psychology",
+   "nameKo": "허니문·행오버 효과",
+   "nameEn": "Honeymoon-Hangover Effect",
+   "demoType": "scenarioQuiz",
+   "ethicsLevel": "safe",
+   "sourceImage": "20261017_122901.jpg"
+  },
+  {
+   "id": 14,
+   "code": "014",
+   "chapter": "psychology",
+   "nameKo": "디코이 효과",
+   "nameEn": "Decoy Effect",
+   "demoType": "choiceLab",
+   "ethicsLevel": "risk",
+   "sourceImage": "20261017_122904.jpg"
+  },
+  {
+   "id": 15,
+   "code": "015",
+   "chapter": "psychology",
+   "nameKo": "낙인 효과",
+   "nameEn": "Labeling Effect",
+   "demoType": "scenarioQuiz",
+   "ethicsLevel": "safe",
+   "sourceImage": "20261017_122921.jpg"
+  },
+  {
+   "id": 16,
+   "code": "016",
+   "chapter": "psychology",
+   "nameKo": "게인로스 효과",
+   "nameEn": "Gain-Loss Effect",
+   "demoType": "scenarioQuiz",
+   "ethicsLevel": "safe",
+   "sourceImage": "20261017_122924.jpg"
+  },
+  {
+   "id": 17,
+   "code": "017",
+   "chapter": "psychology",
+   "nameKo": "대칭 효과",
+   "nameEn": "Symmetry Effect",
+   "demoType": "compareToggle",
+   "ethicsLevel": "safe",
+   "sourceImage": "20261017_122932.jpg"
+  },
+  {
+   "id": 18,
+   "code": "018",
+   "chapter": "psychology",
+   "nameKo": "스놉 효과",
+   "nameEn": "Snob Effect",
+   "demoType": "scenarioQuiz",
+   "ethicsLevel": "risk",
+   "sourceImage": "20261017_122935.jpg"
+  },
+  {
+   "id": 19,
+   "code": "019",
+   "chapter": "psychology",
+   "nameKo": "자이가르닉 효과",
+   "nameEn": "Zeigarnik Effect",
+   "demoType": "scenarioQuiz",
+   "ethicsLevel": "safe",
+   "sourceImage": "20261017_123000.jpg"
+  },
+  {
+   "id": 20,
+   "code": "020",
+   "chapter": "psychology",
+   "nameKo": "플라세보 효과",
+   "nameEn": "Placebo Effect",
+   "demoType": "scenarioQuiz",
+   "ethicsLevel": "caution",
+   "sourceImage": "20261017_123004.jpg"
+  },
+  {
+   "id": 21,
+   "code": "021",
+   "chapter": "psychology",
+   "nameKo": "매몰 비용 효과",
+   "nameEn": "Sunk Cost Fallacy",
+   "demoType": "scenarioQuiz",
+   "ethicsLevel": "risk",
+   "sourceImage": "20261017_123014.jpg"
+  },
+  {
+   "id": 22,
+   "code": "022",
+   "chapter": "psychology",
+   "nameKo": "스토리텔링",
+   "nameEn": "Storytelling",
+   "demoType": "scenarioQuiz",
+   "ethicsLevel": "safe",
+   "sourceImage": "20261017_123017.jpg"
+  },
+  {
+   "id": 23,
+   "code": "023",
+   "chapter": "psychology",
+   "nameKo": "칼리굴라 효과",
+   "nameEn": "Caligula Effect",
+   "demoType": "scenarioQuiz",
+   "ethicsLevel": "risk",
+   "sourceImage": "20261017_123027.jpg"
+  },
+  {
+   "id": 24,
+   "code": "024",
+   "chapter": "psychology",
+   "nameKo": "프라이밍 효과",
+   "nameEn": "Priming Effect",
+   "demoType": "scenarioQuiz",
+   "ethicsLevel": "caution",
+   "sourceImage": "20261017_123030.jpg"
+  },
+  {
+   "id": 25,
+   "code": "025",
+   "chapter": "psychology",
+   "nameKo": "앵커링 효과",
+   "nameEn": "Anchoring Effect",
+   "demoType": "choiceLab",
+   "ethicsLevel": "caution",
+   "sourceImage": "20261017_143846.jpg"
+  },
+  {
+   "id": 26,
+   "code": "026",
+   "chapter": "psychology",
+   "nameKo": "최신 효과",
+   "nameEn": "Recency Effect",
+   "demoType": "scenarioQuiz",
+   "ethicsLevel": "caution",
+   "sourceImage": "20261017_143850.jpg"
+  },
+  {
+   "id": 27,
+   "code": "027",
+   "chapter": "psychology",
+   "nameKo": "단순 접촉 효과",
+   "nameEn": "Mere-Exposure Effect",
+   "demoType": "scenarioQuiz",
+   "ethicsLevel": "caution",
+   "sourceImage": "20261017_143859.jpg"
+  },
+  {
+   "id": 28,
+   "code": "028",
+   "chapter": "psychology",
+   "nameKo": "골디락스 효과",
+   "nameEn": "Goldilocks Effect",
+   "demoType": "choiceLab",
+   "ethicsLevel": "caution",
+   "sourceImage": "20261017_143904.jpg"
+  },
+  {
+   "id": 29,
+   "code": "029",
+   "chapter": "psychology",
+   "nameKo": "리프레이밍 효과",
+   "nameEn": "Reframing Effect",
+   "demoType": "choiceLab",
+   "ethicsLevel": "caution",
+   "sourceImage": "20261017_143935.jpg"
+  },
+  {
+   "id": 30,
+   "code": "030",
+   "chapter": "psychology",
+   "nameKo": "프로스펙트 이론",
+   "nameEn": "Prospect Theory",
+   "demoType": "choiceLab",
+   "ethicsLevel": "risk",
+   "sourceImage": "20261017_143940.jpg"
+  },
+  {
+   "id": 31,
+   "code": "031",
+   "chapter": "psychology",
+   "nameKo": "텐션 리덕션 효과",
+   "nameEn": "Tension Reduction Effect",
+   "demoType": "scenarioQuiz",
+   "ethicsLevel": "risk",
+   "sourceImage": "20261017_143952.jpg"
+  },
+  {
+   "id": 32,
+   "code": "032",
+   "chapter": "psychology",
+   "nameKo": "목표 구배 효과",
+   "nameEn": "Goal Gradient Effect",
+   "demoType": "scenarioQuiz",
+   "ethicsLevel": "safe",
+   "sourceImage": "20261017_143956.jpg"
+  },
+  {
+   "id": 33,
+   "code": "033",
+   "chapter": "psychology",
+   "nameKo": "피크-엔드 법칙",
+   "nameEn": "Peak-End Rule",
+   "demoType": "scenarioQuiz",
+   "ethicsLevel": "safe",
+   "sourceImage": "20261017_144631.jpg"
+  },
+  {
+   "id": 34,
+   "code": "034",
+   "chapter": "psychology",
+   "nameKo": "스트루프 효과",
+   "nameEn": "Stroop Effect",
+   "demoType": "timingGame",
+   "ethicsLevel": "safe",
+   "sourceImage": "20261017_144636.jpg"
+  },
+  {
+   "id": 35,
+   "code": "035",
+   "chapter": "psychology",
+   "nameKo": "인지 부조화",
+   "nameEn": "Cognitive Dissonance",
+   "demoType": "scenarioQuiz",
+   "ethicsLevel": "safe",
+   "sourceImage": "20261017_144642.jpg"
+  },
+  {
+   "id": 36,
+   "code": "036",
+   "chapter": "psychology",
+   "nameKo": "상호성의 원리",
+   "nameEn": "Reciprocity Principle",
+   "demoType": "scenarioQuiz",
+   "ethicsLevel": "caution",
+   "sourceImage": "20261017_144646.jpg"
+  },
+  {
+   "id": 37,
+   "code": "037",
+   "chapter": "psychology",
+   "nameKo": "호손 효과",
+   "nameEn": "Hawthorne Effect",
+   "demoType": "scenarioQuiz",
+   "ethicsLevel": "safe",
+   "sourceImage": "20261017_144757.jpg"
+  },
+  {
+   "id": 38,
+   "code": "038",
+   "chapter": "psychology",
+   "nameKo": "디드로 효과",
+   "nameEn": "Diderot Effect",
+   "demoType": "scenarioQuiz",
+   "ethicsLevel": "safe",
+   "sourceImage": "20261017_144805.jpg"
+  },
+  {
+   "id": 39,
+   "code": "039",
+   "chapter": "psychology",
+   "nameKo": "입소문 효과",
+   "nameEn": "Word-of-Mouth Effect",
+   "demoType": "scenarioQuiz",
+   "ethicsLevel": "caution",
+   "sourceImage": "20261017_145700.jpg"
+  },
+  {
+   "id": 40,
+   "code": "040",
+   "chapter": "psychology",
+   "nameKo": "칵테일 파티 효과",
+   "nameEn": "Cocktail Party Effect",
+   "demoType": "gazeMap",
+   "ethicsLevel": "safe",
+   "sourceImage": "20261017_145704.jpg"
+  },
+  {
+   "id": 41,
+   "code": "041",
+   "chapter": "psychology",
+   "nameKo": "허위 합의 효과",
+   "nameEn": "False Consensus Effect",
+   "demoType": "scenarioQuiz",
+   "ethicsLevel": "safe",
+   "sourceImage": "20261017_145714.jpg"
+  },
+  {
+   "id": 42,
+   "code": "042",
+   "chapter": "psychology",
+   "nameKo": "흔들다리 효과",
+   "nameEn": "Suspension Bridge Effect",
+   "demoType": "scenarioQuiz",
+   "ethicsLevel": "caution",
+   "sourceImage": "20261017_145718.jpg"
+  },
+  {
+   "id": 43,
+   "code": "043",
+   "chapter": "psychology",
+   "nameKo": "부호화 특수성 원리",
+   "nameEn": "Encoding Specificity Principle",
+   "demoType": "scenarioQuiz",
+   "ethicsLevel": "safe",
+   "sourceImage": "20261017_145724.jpg"
+  },
+  {
+   "id": 44,
+   "code": "044",
+   "chapter": "psychology",
+   "nameKo": "청크",
+   "nameEn": "Chunk",
+   "demoType": "timingGame",
+   "ethicsLevel": "safe",
+   "sourceImage": "20261017_145728.jpg"
+  },
+  {
+   "id": 45,
+   "code": "045",
+   "chapter": "psychology",
+   "nameKo": "단수 가격 효과",
+   "nameEn": "Odd Pricing Effect",
+   "demoType": "choiceLab",
+   "ethicsLevel": "caution",
+   "sourceImage": "20261017_145735.jpg"
+  },
+  {
+   "id": 46,
+   "code": "046",
+   "chapter": "psychology",
+   "nameKo": "마감 효과",
+   "nameEn": "Deadline Effect",
+   "demoType": "scenarioQuiz",
+   "ethicsLevel": "risk",
+   "sourceImage": "20261017_145740.jpg"
+  },
+  {
+   "id": 47,
+   "code": "047",
+   "chapter": "psychology",
+   "nameKo": "디폴트 효과",
+   "nameEn": "Default Effect",
+   "demoType": "choiceLab",
+   "ethicsLevel": "risk",
+   "sourceImage": "20261017_145748.jpg"
+  },
+  {
+   "id": 48,
+   "code": "048",
+   "chapter": "psychology",
+   "nameKo": "보유 효과",
+   "nameEn": "Endowment Effect",
+   "demoType": "scenarioQuiz",
+   "ethicsLevel": "caution",
+   "sourceImage": "20261017_145801.jpg"
+  },
+  {
+   "id": 49,
+   "code": "049",
+   "chapter": "psychology",
+   "nameKo": "이유 제시 효과",
+   "nameEn": "Placebic Reason Effect",
+   "demoType": "scenarioQuiz",
+   "ethicsLevel": "caution",
+   "sourceImage": "20261017_145809.jpg"
+  },
+  {
+   "id": 50,
+   "code": "050",
+   "chapter": "psychology",
+   "nameKo": "링겔만 효과",
+   "nameEn": "Ringelmann Effect",
+   "demoType": "scenarioQuiz",
+   "ethicsLevel": "safe",
+   "sourceImage": "20261017_145812.jpg"
+  },
+  {
+   "id": 51,
+   "code": "051",
+   "chapter": "psychology",
+   "nameKo": "힉의 법칙",
+   "nameEn": "Hick's Law",
+   "demoType": "timingGame",
+   "ethicsLevel": "safe",
+   "sourceImage": "20261017_145819.jpg"
+  },
+  {
+   "id": 52,
+   "code": "052",
+   "chapter": "psychology",
+   "nameKo": "문맥 효과",
+   "nameEn": "Context Effect",
+   "demoType": "compareToggle",
+   "ethicsLevel": "safe",
+   "sourceImage": "20261017_145822.jpg"
+  },
+  {
+   "id": 53,
+   "code": "053",
+   "chapter": "illusion",
+   "nameKo": "문커 착시",
+   "nameEn": "Munker Illusion",
+   "demoType": "illusion",
+   "ethicsLevel": "safe",
+   "sourceImage": "20261017_145831.jpg"
+  },
+  {
+   "id": 54,
+   "code": "054",
+   "chapter": "illusion",
+   "nameKo": "문커-화이트 착시",
+   "nameEn": "Munker-White Illusion",
+   "demoType": "illusion",
+   "ethicsLevel": "safe",
+   "sourceImage": "20261017_145835.jpg"
+  },
+  {
+   "id": 55,
+   "code": "055",
+   "chapter": "illusion",
+   "nameKo": "색채 항상성",
+   "nameEn": "Color Constancy",
+   "demoType": "illusion",
+   "ethicsLevel": "safe",
+   "sourceImage": "20261017_145841.jpg"
+  },
+  {
+   "id": 56,
+   "code": "056",
+   "chapter": "illusion",
+   "nameKo": "환경광의 착시",
+   "nameEn": "The Dress Illusion",
+   "demoType": "illusion",
+   "ethicsLevel": "safe",
+   "sourceImage": "20261017_145845.jpg"
+  },
+  {
+   "id": 57,
+   "code": "057",
+   "chapter": "illusion",
+   "nameKo": "체커 그림자 착시",
+   "nameEn": "Checker Shadow Illusion",
+   "demoType": "illusion",
+   "ethicsLevel": "safe",
+   "sourceImage": "20261017_145853.jpg"
+  },
+  {
+   "id": 58,
+   "code": "058",
+   "chapter": "illusion",
+   "nameKo": "에렌슈타인 착시",
+   "nameEn": "Ehrenstein Illusion",
+   "demoType": "illusion",
+   "ethicsLevel": "safe",
+   "sourceImage": "20261017_145857.jpg"
+  },
+  {
+   "id": 59,
+   "code": "059",
+   "chapter": "illusion",
+   "nameKo": "네온 색 확산 효과",
+   "nameEn": "Neon Color Spreading",
+   "demoType": "illusion",
+   "ethicsLevel": "safe",
+   "sourceImage": "20261017_145901.jpg"
+  },
+  {
+   "id": 60,
+   "code": "060",
+   "chapter": "illusion",
+   "nameKo": "프레이저 착시",
+   "nameEn": "Fraser Illusion",
+   "demoType": "illusion",
+   "ethicsLevel": "safe",
+   "sourceImage": "20261017_145906.jpg"
+  },
+  {
+   "id": 61,
+   "code": "061",
+   "chapter": "illusion",
+   "nameKo": "마흐 밴드 착시",
+   "nameEn": "Mach Band Illusion",
+   "demoType": "illusion",
+   "ethicsLevel": "safe",
+   "sourceImage": "20261017_145910.jpg"
+  },
+  {
+   "id": 62,
+   "code": "062",
+   "chapter": "illusion",
+   "nameKo": "쵤너 착시",
+   "nameEn": "Zöllner Illusion",
+   "demoType": "illusion",
+   "ethicsLevel": "safe",
+   "sourceImage": "20261017_145914.jpg"
+  },
+  {
+   "id": 63,
+   "code": "063",
+   "chapter": "illusion",
+   "nameKo": "카니자 삼각형",
+   "nameEn": "Kanizsa Triangle",
+   "demoType": "illusion",
+   "ethicsLevel": "safe",
+   "sourceImage": "20261017_145919.jpg"
+  },
+  {
+   "id": 64,
+   "code": "064",
+   "chapter": "illusion",
+   "nameKo": "헤르만 격자 착시",
+   "nameEn": "Hermann Grid Illusion",
+   "demoType": "illusion",
+   "ethicsLevel": "safe",
+   "sourceImage": "20261017_145923.jpg"
+  },
+  {
+   "id": 65,
+   "code": "065",
+   "chapter": "illusion",
+   "nameKo": "뮐러-리어 착시",
+   "nameEn": "Müller-Lyer Illusion",
+   "demoType": "illusion",
+   "ethicsLevel": "safe",
+   "sourceImage": "20261017_145930.jpg"
+  },
+  {
+   "id": 66,
+   "code": "066",
+   "chapter": "illusion",
+   "nameKo": "피크 착시",
+   "nameEn": "Fick Illusion",
+   "demoType": "illusion",
+   "ethicsLevel": "safe",
+   "sourceImage": "20261017_145934.jpg"
+  },
+  {
+   "id": 67,
+   "code": "067",
+   "chapter": "illusion",
+   "nameKo": "바이컬러 착시",
+   "nameEn": "Bicolor Illusion",
+   "demoType": "illusion",
+   "ethicsLevel": "safe",
+   "sourceImage": "20261017_145946.jpg"
+  },
+  {
+   "id": 68,
+   "code": "068",
+   "chapter": "illusion",
+   "nameKo": "델뵈프 착시",
+   "nameEn": "Delboeuf Illusion",
+   "demoType": "illusion",
+   "ethicsLevel": "safe",
+   "sourceImage": "20261017_145951.jpg"
+  },
+  {
+   "id": 69,
+   "code": "069",
+   "chapter": "illusion",
+   "nameKo": "에빙하우스 착시",
+   "nameEn": "Ebbinghaus Illusion",
+   "demoType": "illusion",
+   "ethicsLevel": "safe",
+   "sourceImage": "20261017_145957.jpg"
+  },
+  {
+   "id": 70,
+   "code": "070",
+   "chapter": "illusion",
+   "nameKo": "폰조 착시",
+   "nameEn": "Ponzo Illusion",
+   "demoType": "illusion",
+   "ethicsLevel": "safe",
+   "sourceImage": "20261017_150002.jpg"
+  },
+  {
+   "id": 71,
+   "code": "071",
+   "chapter": "illusion",
+   "nameKo": "오펠-쿤트 착시",
+   "nameEn": "Oppel-Kundt Illusion",
+   "demoType": "illusion",
+   "ethicsLevel": "safe",
+   "sourceImage": "20261017_150012.jpg"
+  },
+  {
+   "id": 72,
+   "code": "072",
+   "chapter": "illusion",
+   "nameKo": "헬름홀츠의 정사각형",
+   "nameEn": "Helmholtz Square",
+   "demoType": "illusion",
+   "ethicsLevel": "safe",
+   "sourceImage": "20261017_150016.jpg"
+  },
+  {
+   "id": 73,
+   "code": "073",
+   "chapter": "illusion",
+   "nameKo": "상방 거리 과대 착시",
+   "nameEn": "Top-Heavy Illusion",
+   "demoType": "illusion",
+   "ethicsLevel": "safe",
+   "sourceImage": "20261017_150021.jpg"
+  },
+  {
+   "id": 74,
+   "code": "074",
+   "chapter": "illusion",
+   "nameKo": "자스트로 착시",
+   "nameEn": "Jastrow Illusion",
+   "demoType": "illusion",
+   "ethicsLevel": "safe",
+   "sourceImage": "20261017_150025.jpg"
+  },
+  {
+   "id": 75,
+   "code": "075",
+   "chapter": "illusion",
+   "nameKo": "크레이터 착시",
+   "nameEn": "Crater Illusion",
+   "demoType": "illusion",
+   "ethicsLevel": "safe",
+   "sourceImage": "20261017_150032.jpg"
+  },
+  {
+   "id": 76,
+   "code": "076",
+   "chapter": "illusion",
+   "nameKo": "피사의 사탑 착시",
+   "nameEn": "Leaning Tower Illusion",
+   "demoType": "illusion",
+   "ethicsLevel": "safe",
+   "sourceImage": "20261017_150037.jpg"
+  },
+  {
+   "id": 77,
+   "code": "077",
+   "chapter": "illusion",
+   "nameKo": "색채 동화 격자 착시",
+   "nameEn": "Color Assimilation Grid Illusion",
+   "demoType": "illusion",
+   "ethicsLevel": "safe",
+   "sourceImage": "20261017_150044.jpg"
+  },
+  {
+   "id": 78,
+   "code": "078",
+   "chapter": "illusion",
+   "nameKo": "색채 대비",
+   "nameEn": "Color Contrast",
+   "demoType": "colorLab",
+   "ethicsLevel": "safe",
+   "sourceImage": "20261017_150048.jpg"
+  },
+  {
+   "id": 79,
+   "code": "079",
+   "chapter": "color",
+   "nameKo": "전진색과 후퇴색",
+   "nameEn": "Advancing and Receding Colors",
+   "demoType": "colorLab",
+   "ethicsLevel": "safe",
+   "sourceImage": "20261017_150059.jpg"
+  },
+  {
+   "id": 80,
+   "code": "080",
+   "chapter": "color",
+   "nameKo": "팽창색과 수축색",
+   "nameEn": "Expanding and Contracting Colors",
+   "demoType": "colorLab",
+   "ethicsLevel": "safe",
+   "sourceImage": "20261017_150103.jpg"
+  },
+  {
+   "id": 81,
+   "code": "081",
+   "chapter": "color",
+   "nameKo": "난색과 한색",
+   "nameEn": "Warm and Cool Colors",
+   "demoType": "colorLab",
+   "ethicsLevel": "safe",
+   "sourceImage": "20261017_150108.jpg"
+  },
+  {
+   "id": 82,
+   "code": "082",
+   "chapter": "color",
+   "nameKo": "무거운 색과 가벼운 색",
+   "nameEn": "Heavy and Light Colors",
+   "demoType": "colorLab",
+   "ethicsLevel": "safe",
+   "sourceImage": "20261017_150113.jpg"
+  },
+  {
+   "id": 83,
+   "code": "083",
+   "chapter": "color",
+   "nameKo": "색에 따라 연상되는 미각",
+   "nameEn": "Color and Flavor Association",
+   "demoType": "colorLab",
+   "ethicsLevel": "safe",
+   "sourceImage": "20261017_150119.jpg"
+  },
+  {
+   "id": 84,
+   "code": "084",
+   "chapter": "color",
+   "nameKo": "미각 이미지와 색의 차이",
+   "nameEn": "Mismatch Between Flavor Image and Color",
+   "demoType": "colorLab",
+   "ethicsLevel": "safe",
+   "sourceImage": "20261017_150124.jpg"
+  },
+  {
+   "id": 85,
+   "code": "085",
+   "chapter": "color",
+   "nameKo": "음식과 보색",
+   "nameEn": "Food and Complementary Color",
+   "demoType": "colorLab",
+   "ethicsLevel": "safe",
+   "sourceImage": "20261017_150130.jpg"
+  },
+  {
+   "id": 86,
+   "code": "086",
+   "chapter": "color",
+   "nameKo": "음조에 따른 색감",
+   "nameEn": "Color Impressions by Tone",
+   "demoType": "colorLab",
+   "ethicsLevel": "safe",
+   "sourceImage": "20261017_150134.jpg"
+  },
+  {
+   "id": 87,
+   "code": "087",
+   "chapter": "color",
+   "nameKo": "색과 후각",
+   "nameEn": "Color and Scent Perception",
+   "demoType": "colorLab",
+   "ethicsLevel": "safe",
+   "sourceImage": "20261017_150138.jpg"
+  },
+  {
+   "id": 88,
+   "code": "088",
+   "chapter": "color",
+   "nameKo": "후각 이미지와 색의 차이",
+   "nameEn": "Color and Scent Image Mismatch",
+   "demoType": "colorLab",
+   "ethicsLevel": "safe",
+   "sourceImage": "20261017_150143.jpg"
+  },
+  {
+   "id": 89,
+   "code": "089",
+   "chapter": "layout",
+   "nameKo": "근접의 법칙",
+   "nameEn": "Law of Proximity",
+   "demoType": "compareToggle",
+   "ethicsLevel": "safe",
+   "sourceImage": "20261017_150149.jpg"
+  },
+  {
+   "id": 90,
+   "code": "090",
+   "chapter": "layout",
+   "nameKo": "정렬의 법칙",
+   "nameEn": "Law of Alignment",
+   "demoType": "compareToggle",
+   "ethicsLevel": "safe",
+   "sourceImage": "20261017_150153.jpg"
+  },
+  {
+   "id": 91,
+   "code": "091",
+   "chapter": "layout",
+   "nameKo": "반복의 법칙",
+   "nameEn": "Law of Repetition",
+   "demoType": "compareToggle",
+   "ethicsLevel": "safe",
+   "sourceImage": "20261017_150159.jpg"
+  },
+  {
+   "id": 92,
+   "code": "092",
+   "chapter": "layout",
+   "nameKo": "대비의 법칙",
+   "nameEn": "Law of Contrast",
+   "demoType": "compareToggle",
+   "ethicsLevel": "safe",
+   "sourceImage": "20261017_150202.jpg"
+  },
+  {
+   "id": 93,
+   "code": "093",
+   "chapter": "layout",
+   "nameKo": "연속의 법칙",
+   "nameEn": "Law of Continuity",
+   "demoType": "compareToggle",
+   "ethicsLevel": "safe",
+   "sourceImage": "20261017_150208.jpg"
+  },
+  {
+   "id": 94,
+   "code": "094",
+   "chapter": "layout",
+   "nameKo": "유사의 법칙",
+   "nameEn": "Law of Similarity",
+   "demoType": "compareToggle",
+   "ethicsLevel": "safe",
+   "sourceImage": "20261017_150212.jpg"
+  },
+  {
+   "id": 95,
+   "code": "095",
+   "chapter": "layout",
+   "nameKo": "폐쇄의 법칙",
+   "nameEn": "Law of Closure",
+   "demoType": "compareToggle",
+   "ethicsLevel": "safe",
+   "sourceImage": "20261017_150217.jpg"
+  },
+  {
+   "id": 96,
+   "code": "096",
+   "chapter": "layout",
+   "nameKo": "공통 운명의 법칙",
+   "nameEn": "Law of Common Fate",
+   "demoType": "compareToggle",
+   "ethicsLevel": "safe",
+   "sourceImage": "20261017_150221.jpg"
+  },
+  {
+   "id": 97,
+   "code": "097",
+   "chapter": "layout",
+   "nameKo": "면적의 법칙",
+   "nameEn": "Law of Area",
+   "demoType": "compareToggle",
+   "ethicsLevel": "safe",
+   "sourceImage": "20261017_150229.jpg"
+  },
+  {
+   "id": 98,
+   "code": "098",
+   "chapter": "layout",
+   "nameKo": "대칭의 법칙",
+   "nameEn": "Law of Symmetry",
+   "demoType": "compareToggle",
+   "ethicsLevel": "safe",
+   "sourceImage": "20261017_150236.jpg"
+  },
+  {
+   "id": 99,
+   "code": "099",
+   "chapter": "layout",
+   "nameKo": "시그니파이어",
+   "nameEn": "Signifier",
+   "demoType": "compareToggle",
+   "ethicsLevel": "safe",
+   "sourceImage": "20261017_150242.jpg"
+  },
+  {
+   "id": 100,
+   "code": "100",
+   "chapter": "layout",
+   "nameKo": "제이콥의 법칙",
+   "nameEn": "Jakob's Law",
+   "demoType": "compareToggle",
+   "ethicsLevel": "safe",
+   "sourceImage": "20261017_150247.jpg"
+  },
+  {
+   "id": 101,
+   "code": "101",
+   "chapter": "layout",
+   "nameKo": "프로토타입 이론과 모범 이론",
+   "nameEn": "Prototype Theory & Exemplar Theory",
+   "demoType": "compareToggle",
+   "ethicsLevel": "safe",
+   "sourceImage": "20261017_150251.jpg"
+  },
+  {
+   "id": 102,
+   "code": "102",
+   "chapter": "layout",
+   "nameKo": "베버-페히너 법칙",
+   "nameEn": "Weber-Fechner Law",
+   "demoType": "compareToggle",
+   "ethicsLevel": "safe",
+   "sourceImage": "20261017_150255.jpg"
+  },
+  {
+   "id": 103,
+   "code": "103",
+   "chapter": "layout",
+   "nameKo": "피츠의 법칙",
+   "nameEn": "Fitts's Law",
+   "demoType": "timingGame",
+   "ethicsLevel": "safe",
+   "sourceImage": "20261017_150259.jpg"
+  },
+  {
+   "id": 104,
+   "code": "104",
+   "chapter": "layout",
+   "nameKo": "도허티 임계값",
+   "nameEn": "Doherty Threshold",
+   "demoType": "timingGame",
+   "ethicsLevel": "safe",
+   "sourceImage": "20261017_150303.jpg"
+  },
+  {
+   "id": 105,
+   "code": "105",
+   "chapter": "layout",
+   "nameKo": "구텐베르크 다이어그램",
+   "nameEn": "Gutenberg Diagram",
+   "demoType": "gazeMap",
+   "ethicsLevel": "safe",
+   "sourceImage": "20261017_150308.jpg"
+  },
+  {
+   "id": 106,
+   "code": "106",
+   "chapter": "layout",
+   "nameKo": "Z의 법칙",
+   "nameEn": "Z Pattern",
+   "demoType": "gazeMap",
+   "ethicsLevel": "safe",
+   "sourceImage": "20261017_150312.jpg"
+  },
+  {
+   "id": 107,
+   "code": "107",
+   "chapter": "layout",
+   "nameKo": "F의 법칙",
+   "nameEn": "F Pattern",
+   "demoType": "gazeMap",
+   "ethicsLevel": "safe",
+   "sourceImage": "20261017_150317.jpg"
+  },
+  {
+   "id": 108,
+   "code": "108",
+   "chapter": "layout",
+   "nameKo": "N의 법칙",
+   "nameEn": "N Pattern",
+   "demoType": "gazeMap",
+   "ethicsLevel": "safe",
+   "sourceImage": "20261017_150321.jpg"
+  }
+ ],
+ "cases": [
+  {
+   "id": 1,
+   "code": "CASE01",
+   "titleBook": "고급 커피 전문점 웹사이트",
+   "keyMessage": "웹사이트는 목적에 맞게 정돈하고 쓰기 편하게 설계해야 성과로 이어진다",
+   "effectIds": [
+    100,
+    6,
+    1,
+    78,
+    83,
+    5,
+    22,
+    29,
+    51
+   ],
+   "sourceImages": [
+    "20261017_150343.jpg",
+    "20261017_150347.jpg",
+    "20261017_150354.jpg"
+   ],
+   "schoolRemake": "학급·동아리 소개 웹페이지 / 교사 포트폴리오 사이트"
+  },
+  {
+   "id": 2,
+   "code": "CASE02",
+   "titleBook": "후원 요청 포스터",
+   "keyMessage": "정보 그룹화와 시선 흐름을 의식하면 보기 좋은 디자인이 된다",
+   "effectIds": [
+    7,
+    3,
+    15,
+    5,
+    12,
+    39,
+    22
+   ],
+   "sourceImages": [
+    "20261017_150358.jpg",
+    "20261017_150403.jpg",
+    "20261017_150406.jpg"
+   ],
+   "schoolRemake": "교내 나눔 바자회·기부 캠페인 포스터"
+  },
+  {
+   "id": 3,
+   "code": "CASE03",
+   "titleBook": "화장품 랜딩 페이지",
+   "keyMessage": "구매 유도를 위해 여러 심리 효과를 겹쳐 쓴다",
+   "effectIds": [
+    7,
+    2,
+    25,
+    20,
+    12,
+    24,
+    14,
+    28,
+    10,
+    4,
+    30,
+    48
+   ],
+   "sourceImages": [
+    "20261017_150412.jpg",
+    "20261017_150415.jpg",
+    "20261017_150421.jpg"
+   ],
+   "schoolRemake": "방과후·동아리 모집 신청 페이지 (윤리 점검 포함)"
+  },
+  {
+   "id": 4,
+   "code": "CASE04",
+   "titleBook": "이직 서비스 배너 광고",
+   "keyMessage": "타깃이 바로 반응하도록 직접 와닿는 메시지를 만든다",
+   "effectIds": [
+    40,
+    46,
+    106,
+    45
+   ],
+   "sourceImages": [
+    "20261017_150425.jpg"
+   ],
+   "schoolRemake": "진로 박람회 안내 배너 (영어 버전 병행)"
+  },
+  {
+   "id": 5,
+   "code": "CASE05",
+   "titleBook": "화장품 브랜드 배너",
+   "keyMessage": "강조점으로 시선이 흐르도록 설계한다",
+   "effectIds": [
+    17,
+    108,
+    18,
+    10,
+    27,
+    26
+   ],
+   "sourceImages": [
+    "20261017_150429.jpg"
+   ],
+   "schoolRemake": "학교 축제·공연 홍보 배너"
+  },
+  {
+   "id": 6,
+   "code": "CASE06",
+   "titleBook": "YouTube 썸네일(디저트)",
+   "keyMessage": "글자로 채우기보다 시선을 잡는 데 집중한다",
+   "effectIds": [
+    8,
+    98,
+    19,
+    92
+   ],
+   "sourceImages": [
+    "20261017_150433.jpg"
+   ],
+   "schoolRemake": "수업 영상·채널 썸네일"
+  },
+  {
+   "id": 7,
+   "code": "CASE07",
+   "titleBook": "엔터테인먼트 영상 썸네일",
+   "keyMessage": "호기심을 자극해 시선을 빼앗는다",
+   "effectIds": [
+    23,
+    9,
+    19,
+    35
+   ],
+   "sourceImages": [
+    "20261017_150438.jpg"
+   ],
+   "schoolRemake": "학습 영상 썸네일 + '낚시성' 비판적 분석"
+  },
+  {
+   "id": 8,
+   "code": "CASE08",
+   "titleBook": "명함",
+   "keyMessage": "기본 레이아웃 규칙과 시선 흐름을 의식한다",
+   "effectIds": [
+    95,
+    73,
+    89,
+    91,
+    44
+   ],
+   "sourceImages": [
+    "20261017_150442.jpg"
+   ],
+   "schoolRemake": "교사 명함 / 학생 영어 자기소개 카드"
+  },
+  {
+   "id": 9,
+   "code": "CASE09",
+   "titleBook": "쇼핑몰 결제 직전 화면",
+   "keyMessage": "결정 직후 긴장이 풀리면 추가 구매로 이어진다",
+   "effectIds": [
+    31,
+    12,
+    51,
+    47
+   ],
+   "sourceImages": [
+    "20261017_150447.jpg",
+    "20261017_150450.jpg"
+   ],
+   "schoolRemake": "(미디어 리터러시) 앱 결제 화면 분석"
+  },
+  {
+   "id": 10,
+   "code": "CASE10",
+   "titleBook": "구독 해지 방어 화면",
+   "keyMessage": "해지를 막기 위한 심리 효과가 겹쳐 있다",
+   "effectIds": [
+    4,
+    36,
+    21,
+    30
+   ],
+   "sourceImages": [
+    "20261017_150456.jpg"
+   ],
+   "schoolRemake": "(미디어 리터러시) 다크 패턴 찾기 활동"
+  },
+  {
+   "id": 11,
+   "code": "CASE11",
+   "titleBook": "운동 기록 앱 UI",
+   "keyMessage": "익숙한 경험을 바탕으로 처음 써도 쉽게 만든다",
+   "effectIds": [
+    32,
+    100,
+    103,
+    93
+   ],
+   "sourceImages": [
+    "20261017_150459.jpg"
+   ],
+   "schoolRemake": "학습 진도 대시보드 웹앱 UI"
+  }
+ ]
+}
