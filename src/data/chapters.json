@@ -1,0 +1,38 @@
+[
+  {
+    "id": "psychology",
+    "no": 1,
+    "nameKo": "디자인에 쓰는 심리 효과",
+    "nameEn": "Design Psychology",
+    "range": [1, 52],
+    "colorToken": "--ch-psychology",
+    "intro": "사람의 무의식과 행동 편향을 이해하고 화면에 긍정적인 행동을 유도하는 52가지 심리 원리입니다."
+  },
+  {
+    "id": "illusion",
+    "no": 2,
+    "nameKo": "착시 효과",
+    "nameEn": "Visual Illusions",
+    "range": [53, 78],
+    "colorToken": "--ch-illusion",
+    "intro": "눈과 뇌의 시각 처리 과정에서 발생하는 기하학적·명암·색채 착각 현상을 활용한 26가지 시각 원리입니다."
+  },
+  {
+    "id": "color",
+    "no": 3,
+    "nameKo": "색채 효과",
+    "nameEn": "Color Effects",
+    "range": [79, 88],
+    "colorToken": "--ch-color",
+    "intro": "색의 온도, 무게감, 공감각적 전이(맛·향)를 고려해 감정을 자극하는 10가지 색채 심리 원리입니다."
+  },
+  {
+    "id": "layout",
+    "no": 4,
+    "nameKo": "레이아웃·UX 법칙",
+    "nameEn": "Layout & UX Laws",
+    "range": [89, 108],
+    "colorToken": "--ch-layout",
+    "intro": "게슈탈트 지각 원리와 시선 흐름 패턴을 바탕으로 정보를 정돈하고 사용성을 극대화하는 20가지 배치 법칙입니다."
+  }
+]
