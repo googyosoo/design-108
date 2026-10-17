@@ -1,0 +1,18 @@
+{
+  "name": "DesignMind 108 — 교육용 디자인 심리학 도감",
+  "short_name": "DesignMind 108",
+  "description": "교실, 학교 활동, 교원 연수, 웹앱을 위한 108가지 인터랙티브 디자인 심리학 원리와 11개 실전 리메이크 스튜디오",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#4f46e5",
+  "orientation": "any",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

@@ -1,16 +1,77 @@
-# React + Vite
+# DesignMind 108 (디자인마인드 108)
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+> **"마음을 움직이는 디자인 심리학 108가지 원리와 11개 실전 학교 리메이크 스튜디오"**  
+> 고등학교 교실, 교원 직무 연수, 교육용 웹앱, 학부모 안내 자료를 위한 인터랙티브 시각 인지 심리학 플랫폼
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🌟 프로젝트 개요
 
-## React Compiler
+**DesignMind 108**은 인지 심리학, 게슈탈트 시지각 이론, WCAG 2.2 웹 접근성 표준을 기반으로 구축된 최첨단 교육용 웹 애플리케이션입니다.
+- **108개 디자인 심리학 원리 전수 수록**: 심리 편향, 시지각 착시, 색채 심리, 레이아웃 등 4개 챕터.
+- **100% 인터랙티브 체험 엔진**: 6대 범용 인터랙티브 템플릿 + 25종 순수 SVG 시지각 착시 모듈.
+- **11개 학교판 실전 리메이크 스튜디오**: 가정통신문, 포스터, 슬라이드, 웹앱 비포/애프터 비교 및 핫스팟(Hotspot) 탐색.
+- **4종 인터랙티브 연습 허브**: 4지선다 퀴즈(40제), 윤리 & 다크패턴 판별(20제), 108 플래시카드, 영단어 매칭.
+- **AI 도구 및 교육 모듈**: AI 프롬프트 빌더(Markdown 다운로드), AI 디자인 진단 스튜디오, A4 인쇄용 활동지/루브릭.
+- **교실 프로젝터 전용 발표 모드**: 단축키(`F`, `←`, `→`, `Esc`) 및 30초 대화형 인터랙티브 실험실 완비.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the Oxlint configuration
+## 🚀 빠른 시작 (Getting Started)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+### 요구 사양
+- Node.js 18.0.0 이상
+- npm 9.0.0 이상
+
+### 설치 및 로컬 실행
+```bash
+# 의존성 설치
+npm install
+
+# 데이터 무결성 검증 (Zod Schema 9종 215개 항목)
+npm run validate:data
+
+# 린트 및 빌드 검증 (통합 점검)
+npm run check
+
+# 개발 서버 실행 (기본 포트: 5173)
+npm run dev
+
+# 프로덕션 빌드 및 미리보기 (포트: 4173)
+npm run build
+npm run preview
+```
+
+---
+
+## ⌨️ 전역 단축키 (Keyboard Shortcuts)
+
+| 단축키 | 기능 |
+| :--- | :--- |
+| **`Ctrl + K`** / **`Cmd + K`** | 전역 초성/퍼지 검색 모달창 호출 |
+| **`X`** | **X-ray 인지 모드** 토글 (화면에 적용된 심리 원리 ID 오버레이) |
+| **`F`** | 발표 모드 전체화면 토글 |
+| **`←`** / **`→`** / **`Space`** | 발표 모드 슬라이드 이동 |
+| **`Esc`** | 발표 모드 종료 및 검색창 닫기 |
+
+---
+
+## 🛠 기술 스택 (Tech Stack)
+
+- **Frontend**: React 19 (Server Components ready, React.lazy 코드 스플리팅)
+- **Routing**: React Router DOM v7
+- **Styling**: Tailwind CSS v4 (Design Tokens, `@theme`, 다크 모드, 고대비 모드, 인쇄 전용 `@media print`)
+- **Typography**: Pretendard Variable (한국어 본문 최적화 가변 글꼴)
+- **Icons**: Lucide React
+- **Search**: Fuse.js (한글 초성 분리 검색 엔진 하이브리드)
+- **Validation**: Zod (9개 데이터 파일 215개 항목 정적 스키마 검증)
+- **PWA**: Web App Manifest, Service Worker (`sw.js` 오프라인 캐싱)
+- **Build Engine**: Vite 8 with Rolldown (초기 엔트리 번들 gzip 130 kB 유지)
+
+---
+
+## 📜 저작권 및 헌법적 성명 (Copyright & Fair Use)
+
+- 본 플랫폼의 108가지 원리 텍스트, Do/Don't, 25개 착시 SVG, 11개 리메이크 사례는 학술적 인지 심리학과 교육공학 연구를 바탕으로 **100% 학교 현장 맥락에 맞추어 독자 집필·제작**되었습니다.
+- 원 참고 도서의 상업적 사진 127장 및 브랜드 상표는 영감으로만 활용되었으며, **어떠한 원본 이미지 파일이나 텍스트도 본 소프트웨어 패키지 내에 복제되거나 전재되지 않았습니다.**
+- MIT License. 누구나 자유롭게 교실 수업과 연구, 교육에 활용할 수 있습니다.

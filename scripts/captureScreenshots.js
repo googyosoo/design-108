@@ -66,7 +66,7 @@ async function run() {
     await send('Page.enable')
     await send('Network.enable')
     const targets = [
-      { url: 'http://localhost:4173/tools/diagnose', prefix: 'phase6-diagnose-hub' },
+      { url: 'http://localhost:4173/about', prefix: 'phase7-about-manifesto' },
     ]
 
     for (const target of targets) {

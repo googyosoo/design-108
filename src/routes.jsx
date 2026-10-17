@@ -3,7 +3,7 @@ import { lazy, Suspense } from 'react'
 import { createBrowserRouter } from 'react-router-dom'
 import { AppShell } from './components/layout/AppShell.jsx'
 import { Skeleton } from './components/ui/Skeleton.jsx'
-import { PlaceholderPage, NotFoundPage } from './pages/Placeholder.jsx'
+import { NotFoundPage } from './pages/Placeholder.jsx'
 
 const HomePage = lazy(() => import('./pages/Home.jsx').then((m) => ({ default: m.HomePage })))
 const LibraryPage = lazy(() => import('./pages/Library.jsx').then((m) => ({ default: m.LibraryPage })))
@@ -19,6 +19,7 @@ const DiagnosePage = lazy(() => import('./pages/Diagnose.jsx').then((m) => ({ de
 const TeachHubPage = lazy(() => import('./pages/TeachHub.jsx').then((m) => ({ default: m.TeachHubPage })))
 const TeachModulePage = lazy(() => import('./pages/TeachModule.jsx').then((m) => ({ default: m.TeachModulePage })))
 const MyPage = lazy(() => import('./pages/My.jsx').then((m) => ({ default: m.MyPage })))
+const AboutPage = lazy(() => import('./pages/About.jsx').then((m) => ({ default: m.AboutPage })))
 const DevUiPage = lazy(() => import('./pages/DevUi.jsx').then((m) => ({ default: m.DevUiPage })))
 
 function PageSuspense({ children }) {
@@ -160,11 +161,9 @@ export const router = createBrowserRouter([
       {
         path: 'about',
         element: (
-          <PlaceholderPage
-            title="앱 소개 및 출처 (About)"
-            phase="7"
-            description="DesignMind 108 기획 의도, 저작권 출처 표기, 개인정보 처리방침 안내입니다."
-          />
+          <PageSuspense>
+            <AboutPage />
+          </PageSuspense>
         ),
       },
       {
