@@ -2,6 +2,7 @@ import { useEffect } from 'react'
 import { useParams, Link } from 'react-router-dom'
 import { ArrowLeft, Printer, Clock, Target, CheckCircle2, FileText, Layers } from 'lucide-react'
 import { Button } from '../components/ui/Button.jsx'
+import { TeamCoachSwarm } from '../components/teach/TeamCoachSwarm.jsx'
 import lessonsData from '../data/lessons.json'
 
 export function TeachModulePage() {
@@ -31,16 +32,35 @@ export function TeachModulePage() {
     window.print()
   }
 
+  // 모듈별 연계 심리학 원리 ID 추출
+  const getModuleRelatedEffectIds = (id) => {
+    switch (id) {
+      case 'M1-english-poster':
+        return [7, 8, 10, 89] // 시선 유도, 포인팅, 대비, 근접
+      case 'M2-persuade-or-manipulate':
+        return [12, 14, 25, 41] // 밴드왜건, 디코이, 앵커링, 기본값 효과
+      case 'M3-webapp-upgrade':
+        return [6, 12, 100, 89] // 폰 레스토프, 가독성, 제이콥의 법칙, 근접
+      case 'M4-material-redesign':
+        return [5, 10, 89] // 폰 레스토프, 대비, 근접
+      default:
+        return [7, 10, 89]
+    }
+  }
+
+  const moduleRelatedEffectIds = getModuleRelatedEffectIds(moduleItem.id)
+
   return (
     <div className="mx-auto max-w-4xl px-4 sm:px-6 py-8 space-y-10">
       {/* 화면 전용 상단 툴바 (인쇄 시 숨김) */}
       <div className="print:hidden flex items-center justify-between border-b border-slate-200 dark:border-slate-800 pb-4">
-        <Link to="/teach" className="inline-flex items-center gap-1.5 text-xs font-semibold text-slate-500 hover:text-slate-900">
+        <Link to="/teach" className="inline-flex items-center gap-1.5 text-xs font-semibold text-slate-500 hover:text-slate-900 dark:hover:text-slate-200">
           <ArrowLeft className="h-4 w-4" />
           <span>전체 4개 수업 모듈</span>
         </Link>
-        <Button variant="primary" size="sm" onClick={handlePrint} leftIcon={<Printer className="h-4 w-4" />}>
-          활동지 A4 인쇄하기
+        <Button variant="primary" size="sm" onClick={handlePrint} className="gap-1.5">
+          <Printer className="h-4 w-4" aria-hidden="true" />
+          <span>활동지 A4 인쇄하기</span>
         </Button>
       </div>
 
@@ -136,6 +156,14 @@ export function TeachModulePage() {
         </div>
       </section>
 
+      {/* 모둠 활동 AI 코치 스웜 인터랙티브 패널 (인쇄 시 엄격히 숨김) */}
+      <section className="print:hidden space-y-4">
+        <TeamCoachSwarm
+          moduleTitle={moduleItem.title}
+          relatedEffectIds={moduleRelatedEffectIds}
+        />
+      </section>
+
       {/* 학생 인쇄용 활동지 뷰 (A4 인쇄 영역) */}
       <section className="space-y-4 pt-4 border-t-2 border-dashed border-slate-300 dark:border-slate-700 print:border-none print:pt-0">
         <div className="flex items-center justify-between pb-2 border-b border-slate-200 dark:border-slate-800 print:hidden">
@@ -143,8 +171,9 @@ export function TeachModulePage() {
             <FileText className="h-5 w-5 text-amber-500" />
             <h2 className="text-base font-bold text-slate-900 dark:text-slate-100">학생 인쇄용 활동지 (A4)</h2>
           </div>
-          <Button variant="secondary" size="sm" onClick={handlePrint} leftIcon={<Printer className="h-4 w-4" />}>
-            인쇄 미리보기
+          <Button variant="secondary" size="sm" onClick={handlePrint} className="gap-1.5">
+            <Printer className="h-4 w-4" aria-hidden="true" />
+            <span>인쇄 미리보기</span>
           </Button>
         </div>
 
