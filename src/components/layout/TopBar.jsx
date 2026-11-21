@@ -1,4 +1,4 @@
-import { useNavigate, useLocation } from 'react-router-dom'
+import { Link, useNavigate, useLocation } from 'react-router-dom'
 import { useTheme } from '../../hooks/useTheme.js'
 import { useXray } from '../../hooks/useXray.js'
 import { Principle } from '../xray/Principle.jsx'
@@ -6,7 +6,7 @@ import { Principle } from '../xray/Principle.jsx'
 /**
  * 01_WEBAPP_STANDARDS 준수 TopBar 컴포넌트
  * - 높이 56px 고정
- * - 뒤로가기, 타이틀, X-ray 토글, 테마 토글
+ * - 홈 버튼, 뒤로가기, 타이틀, X-ray 토글, 테마 토글
  */
 export function TopBar({ title = 'DesignMind 108', onSearchClick }) {
   const navigate = useNavigate()
@@ -18,19 +18,31 @@ export function TopBar({ title = 'DesignMind 108', onSearchClick }) {
 
   return (
     <header className="sticky top-0 z-40 w-full h-[56px] bg-[var(--color-surface)]/90 backdrop-blur-md border-b border-[var(--color-line)] px-4 flex items-center justify-between">
-      <div className="flex items-center gap-2">
+      <div className="flex items-center gap-1 sm:gap-2">
+        {/* 상단 홈 아이콘 버튼 */}
+        <Link
+          to="/"
+          aria-label="홈으로"
+          title="홈으로"
+          className="min-w-[44px] min-h-[44px] inline-flex items-center justify-center rounded-[var(--radius-md)] text-[var(--color-ink)] hover:bg-[var(--color-bg)] transition-colors focus-visible:outline-2 focus-visible:outline-[var(--color-focus)] cursor-pointer"
+        >
+          <span aria-hidden="true" className="text-base">🏠</span>
+          <span className="sr-only">홈으로</span>
+        </Link>
+
         {!isRoot && (
           <button
             type="button"
             onClick={() => navigate(-1)}
             aria-label="이전 화면으로 가기"
+            title="이전 화면으로 가기"
             className="min-w-[44px] min-h-[44px] inline-flex items-center justify-center rounded-[var(--radius-md)] text-[var(--color-ink)] hover:bg-[var(--color-bg)] transition-colors focus-visible:outline-2 focus-visible:outline-[var(--color-focus)] cursor-pointer"
           >
             ←
           </button>
         )}
         <Principle ids={[7, 90]} position="bottom-right">
-          <h1 className="text-[var(--text-h3)] font-bold text-[var(--color-ink)] truncate max-w-[200px] sm:max-w-md">
+          <h1 className="text-[var(--text-h3)] font-bold text-[var(--color-ink)] truncate max-w-[180px] sm:max-w-md">
             {title}
           </h1>
         </Principle>
@@ -42,6 +54,7 @@ export function TopBar({ title = 'DesignMind 108', onSearchClick }) {
             type="button"
             onClick={onSearchClick}
             aria-label="전역 검색 열기"
+            title="전역 검색 열기"
             className="min-w-[44px] min-h-[44px] inline-flex items-center justify-center rounded-[var(--radius-md)] text-[var(--color-ink)] hover:bg-[var(--color-bg)] transition-colors focus-visible:outline-2 focus-visible:outline-[var(--color-focus)] cursor-pointer"
           >
             🔍
@@ -53,6 +66,7 @@ export function TopBar({ title = 'DesignMind 108', onSearchClick }) {
           type="button"
           onClick={toggleXray}
           aria-label={isXrayEnabled ? 'X-ray 모드 끄기' : 'X-ray 모드 켜기 (적용된 원리 보기)'}
+          title={isXrayEnabled ? 'X-ray 모드 끄기 (단축키 X)' : 'X-ray 모드 켜기 (단축키 X)'}
           aria-pressed={isXrayEnabled}
           className={`
             min-w-[44px] min-h-[44px] inline-flex items-center justify-center rounded-[var(--radius-md)] transition-colors cursor-pointer text-xs font-bold gap-1 px-2 focus-visible:outline-2 focus-visible:outline-[var(--color-focus)]
@@ -74,6 +88,7 @@ export function TopBar({ title = 'DesignMind 108', onSearchClick }) {
           type="button"
           onClick={toggleTheme}
           aria-label={`테마 변경 (현재: ${resolvedTheme === 'dark' ? '다크 모드' : '라이트 모드'})`}
+          title={`테마 변경 (현재: ${resolvedTheme === 'dark' ? '다크 모드' : '라이트 모드'})`}
           className="min-w-[44px] min-h-[44px] inline-flex items-center justify-center rounded-[var(--radius-md)] text-[var(--color-ink)] hover:bg-[var(--color-bg)] transition-colors focus-visible:outline-2 focus-visible:outline-[var(--color-focus)] cursor-pointer"
         >
           {resolvedTheme === 'dark' ? '☀️' : '🌙'}

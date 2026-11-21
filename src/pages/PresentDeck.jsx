@@ -99,6 +99,7 @@ export function PresentDeckPage() {
             onClick={toggleFullscreen}
             className="p-2 rounded-xl text-slate-400 hover:text-white hover:bg-slate-800 transition-colors"
             aria-label="전체화면 토글 (단축키: F)"
+            title="전체화면 토글 (단축키: F)"
           >
             {isFullscreen ? <Minimize2 className="h-4 w-4" /> : <Maximize2 className="h-4 w-4" />}
           </button>
@@ -107,6 +108,7 @@ export function PresentDeckPage() {
             onClick={handleExit}
             className="p-2 rounded-xl text-slate-400 hover:text-white hover:bg-slate-800 transition-colors"
             aria-label="발표 모드 나가기 (단축키: Esc)"
+            title="발표 모드 나가기 (단축키: Esc)"
           >
             <X className="h-4 w-4" />
           </button>
@@ -266,6 +268,7 @@ export function PresentDeckPage() {
                 slideIndex === idx ? 'w-6 bg-indigo-500' : 'w-2 bg-slate-800 hover:bg-slate-700'
               }`}
               aria-label={`슬라이드 ${idx + 1}로 이동`}
+              title={`슬라이드 ${idx + 1}로 이동`}
             />
           ))}
         </div>

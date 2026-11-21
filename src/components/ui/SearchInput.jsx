@@ -57,6 +57,7 @@ export const SearchInput = forwardRef(function SearchInput(
           type="button"
           onClick={handleClear}
           aria-label="검색어 지우기"
+          title="검색어 지우기"
           className="absolute right-2 min-w-[32px] min-h-[32px] inline-flex items-center justify-center text-[var(--color-ink-muted)] hover:text-[var(--color-ink)] p-1 rounded transition-colors cursor-pointer"
         >
           ✕

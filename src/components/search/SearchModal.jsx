@@ -97,6 +97,8 @@ function SearchModalInner({ onClose }) {
             <button
               type="button"
               onClick={() => setQuery('')}
+              aria-label="검색어 지우기"
+              title="검색어 지우기"
               className="p-1 rounded-md text-[var(--color-text-tertiary)] hover:text-[var(--color-text-primary)]"
             >
               <X className="w-4 h-4" />

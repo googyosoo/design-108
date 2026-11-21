@@ -77,6 +77,7 @@ export function PromptBox({ effect, onToast }) {
           type="button"
           onClick={handleCopy}
           aria-label="프롬프트 복사"
+          title="프롬프트 복사"
           className="absolute right-3 top-3 p-2 rounded-lg bg-[var(--color-surface)] border border-[var(--color-border)] hover:bg-[var(--color-surface-hover)] text-[var(--color-text-secondary)] hover:text-[var(--color-primary)] transition-all shadow-xs"
         >
           {copied ? (

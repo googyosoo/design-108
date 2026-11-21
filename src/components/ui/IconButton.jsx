@@ -44,6 +44,7 @@ export const IconButton = forwardRef(function IconButton(
       ref={ref}
       type={type}
       aria-label={ariaLabel}
+      title={props.title || ariaLabel}
       disabled={isActuallyDisabled}
       aria-disabled={isActuallyDisabled}
       className={`

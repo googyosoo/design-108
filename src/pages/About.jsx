@@ -12,7 +12,12 @@ export function AboutPage() {
     <div className="mx-auto max-w-4xl px-4 sm:px-6 py-8 sm:py-12 space-y-10">
       {/* 상단 헤더 */}
       <div className="space-y-3">
-        <Link to="/" className="inline-flex items-center gap-1.5 text-xs font-semibold text-slate-500 hover:text-slate-900">
+        <Link
+          to="/"
+          aria-label="홈으로 돌아가기"
+          title="홈으로 돌아가기"
+          className="inline-flex items-center gap-1.5 text-xs font-semibold text-slate-500 hover:text-slate-900"
+        >
           <ArrowLeft className="h-4 w-4" />
           <span>홈으로 돌아가기</span>
         </Link>

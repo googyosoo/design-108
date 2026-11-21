@@ -107,6 +107,7 @@ export function EffectCard({ effect }) {
             type="button"
             onClick={handleFavoriteClick}
             aria-label={favored ? '즐겨찾기 해제' : '즐겨찾기 추가'}
+            title={favored ? '즐겨찾기 해제' : '즐겨찾기 추가'}
             className={`p-1.5 rounded-lg transition-colors ${
               favored
                 ? 'text-amber-500 fill-amber-500 hover:bg-amber-50 dark:hover:bg-amber-950/40'

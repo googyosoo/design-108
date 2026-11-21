@@ -134,6 +134,7 @@ export function CaseCanvas({ caseData, mode = 'after' }) {
             onClick={() => setSelectedHotspot(null)}
             className="absolute top-3 right-3 p-1.5 rounded-lg text-slate-400 hover:text-slate-700 dark:hover:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
             aria-label="핫스팟 닫기"
+            title="핫스팟 닫기"
           >
             <X className="h-4 w-4" />
           </button>

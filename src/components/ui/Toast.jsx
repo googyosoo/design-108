@@ -40,6 +40,7 @@ export function Toast({
           type="button"
           onClick={onClose}
           aria-label="알림 닫기"
+          title="알림 닫기"
           className="min-w-[32px] min-h-[32px] inline-flex items-center justify-center p-1 opacity-70 hover:opacity-100 transition-opacity rounded cursor-pointer"
         >
           ✕

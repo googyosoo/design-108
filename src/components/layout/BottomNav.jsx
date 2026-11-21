@@ -27,6 +27,8 @@ export function BottomNav() {
             <NavLink
               key={item.to}
               to={item.to}
+              aria-label={item.label === '홈' ? '홈으로' : `${item.label} 메뉴로 이동`}
+              title={item.label === '홈' ? '홈으로' : `${item.label} 메뉴로 이동`}
               className={({ isActive }) => `
                 flex flex-col items-center justify-center flex-1 min-w-[44px] min-h-[44px] py-1 text-center select-none transition-colors rounded-[var(--radius-sm)] focus-visible:outline-2 focus-visible:outline-[var(--color-focus)]
                 ${

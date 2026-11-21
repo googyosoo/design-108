@@ -1,4 +1,4 @@
-import { NavLink } from 'react-router-dom'
+import { NavLink, Link } from 'react-router-dom'
 import { Principle } from '../xray/Principle.jsx'
 
 /**
@@ -29,7 +29,12 @@ export function SideNav() {
       aria-label="데스크톱 주 내비게이션"
       className="hidden lg:flex flex-col w-[240px] shrink-0 border-r border-[var(--color-line)] bg-[var(--color-surface)] h-screen sticky top-0 p-4 overflow-y-auto"
     >
-      <div className="flex items-center gap-3 px-2 py-3 mb-6">
+      <Link
+        to="/"
+        aria-label="홈으로"
+        title="홈으로"
+        className="flex items-center gap-3 px-2 py-3 mb-6 rounded-xl hover:bg-[var(--color-bg)] transition-colors focus-visible:outline-2 focus-visible:outline-[var(--color-focus)] cursor-pointer"
+      >
         <div className="w-9 h-9 rounded-full bg-[var(--color-success)] text-white flex items-center justify-center font-bold text-sm tabular-nums">
           108
         </div>
@@ -41,7 +46,7 @@ export function SideNav() {
             디자인 심리 108
           </span>
         </div>
-      </div>
+      </Link>
 
       <Principle ids={[89, 91]} position="top-right" className="mb-6">
         <div className="text-[11px] font-bold text-[var(--color-ink-muted)] px-3 mb-2 tracking-wider uppercase">
@@ -52,6 +57,8 @@ export function SideNav() {
             <NavLink
               key={link.to}
               to={link.to}
+              aria-label={link.label === '홈' ? '홈으로' : `${link.label} 메뉴로 이동`}
+              title={link.label === '홈' ? '홈으로' : `${link.label} 메뉴로 이동`}
               className={({ isActive }) => `
                 flex items-center gap-3 px-3 py-2.5 rounded-[var(--radius-md)] text-[var(--text-small)] font-medium transition-colors select-none focus-visible:outline-2 focus-visible:outline-[var(--color-focus)]
                 ${

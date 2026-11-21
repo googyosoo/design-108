@@ -6,6 +6,7 @@ import { fileURLToPath } from 'node:url'
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 const projectRoot = path.resolve(__dirname, '..')
 const screenshotDir = path.join(projectRoot, 'docs', 'progress', 'screenshots')
+const PORT = 5873
 
 async function waitUrl(url, timeoutMs = 15000) {
   const start = Date.now()
@@ -22,8 +23,8 @@ async function waitUrl(url, timeoutMs = 15000) {
 }
 
 async function main() {
-  console.log('[e2eVerify] 1. Starting vite preview server on port 4173...')
-  const preview = spawn('npx', ['vite', 'preview', '--port', '4173'], {
+  console.log(`[e2eVerify] 1. Starting vite preview server on port ${PORT}...`)
+  const preview = spawn('npx', ['vite', 'preview', '--port', String(PORT)], {
     cwd: projectRoot,
     shell: true,
     stdio: 'pipe',
@@ -33,8 +34,8 @@ async function main() {
   preview.stderr.on('data', (d) => process.stderr.write(`[vite:err] ${d}`))
 
   try {
-    await waitUrl('http://localhost:4173/design-108/')
-    console.log('[e2eVerify] Preview server is ready at http://localhost:4173/design-108/')
+    await waitUrl(`http://localhost:${PORT}/design-108/`)
+    console.log(`[e2eVerify] Preview server is ready at http://localhost:${PORT}/design-108/`)
 
     console.log('[e2eVerify] 2. Launching Chromium headless...')
     const browser = await chromium.launch({ headless: true })
@@ -43,6 +44,7 @@ async function main() {
 
     const testPages = [
       { name: 'home', path: '/design-108/' },
+      { name: 'effect_001', path: '/design-108/effect/001' },
       { name: 'diagnose', path: '/design-108/diagnose' },
       { name: 'prompt', path: '/design-108/tools/prompt' },
       { name: 'teach_m01', path: '/design-108/teach/M01' },
@@ -72,7 +74,7 @@ async function main() {
     })
 
     for (const p of testPages) {
-      const url = `http://localhost:4173${p.path}`
+      const url = `http://localhost:${PORT}${p.path}`
       await desktopPage.goto(url, { waitUntil: 'networkidle' })
       const title = await desktopPage.title()
       const shotPath = path.join(screenshotDir, `desktop_${p.name}.png`)
@@ -82,7 +84,7 @@ async function main() {
 
     // Diagnose 페이지에서 프리셋 버튼 인터랙션 검증
     console.log('[e2eVerify] 4. Testing Diagnose Preset buttons...')
-    await desktopPage.goto('http://localhost:4173/design-108/diagnose', { waitUntil: 'networkidle' })
+    await desktopPage.goto(`http://localhost:${PORT}/design-108/diagnose`, { waitUntil: 'networkidle' })
     const schoolNoticeBtn = desktopPage.locator('button:has-text("학교 가정통신문")')
     if (await schoolNoticeBtn.count() > 0) {
       await schoolNoticeBtn.click()
@@ -94,7 +96,7 @@ async function main() {
 
     // PromptBuilder 페이지에서 3단계 스웜 실행 인터랙션 검증
     console.log('[e2eVerify] 5. Testing PromptBuilder Swarm execution...')
-    await desktopPage.goto('http://localhost:4173/design-108/tools/prompt', { waitUntil: 'networkidle' })
+    await desktopPage.goto(`http://localhost:${PORT}/design-108/tools/prompt`, { waitUntil: 'networkidle' })
     const runSwarmBtn = desktopPage.locator('button:has-text("3단계 에이전트 스웜 검증 실행")')
     if (await runSwarmBtn.count() > 0) {
       await runSwarmBtn.click()
@@ -108,7 +110,7 @@ async function main() {
 
     // TeachModule 페이지에서 TeamCoachSwarm 인터랙션 검증
     console.log('[e2eVerify] 6. Testing TeamCoachSwarm on TeachModule M01...')
-    await desktopPage.goto('http://localhost:4173/design-108/teach/M01', { waitUntil: 'networkidle' })
+    await desktopPage.goto(`http://localhost:${PORT}/design-108/teach/M01`, { waitUntil: 'networkidle' })
     const coachPanel = desktopPage.locator('text=모둠 활동 AI 코치 스웜')
     if (await coachPanel.count() > 0) {
       const shotTeachCoach = path.join(screenshotDir, 'desktop_teach_m01_coach.png')
@@ -140,7 +142,7 @@ async function main() {
     })
 
     for (const p of testPages) {
-      const url = `http://localhost:4173${p.path}`
+      const url = `http://localhost:${PORT}${p.path}`
       await mobilePage.goto(url, { waitUntil: 'networkidle' })
       const shotPath = path.join(screenshotDir, `mobile_${p.name}_390.png`)
       await mobilePage.screenshot({ path: shotPath, fullPage: false })

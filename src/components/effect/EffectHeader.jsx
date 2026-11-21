@@ -55,6 +55,8 @@ export function EffectHeader({ effect }) {
           <button
             type="button"
             onClick={() => toggleFavorite(effect.id)}
+            aria-label={favored ? '즐겨찾기 해제' : '즐겨찾기 추가'}
+            title={favored ? '즐겨찾기 해제' : '즐겨찾기 추가'}
             className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg border text-xs font-medium transition-all ${
               favored
                 ? 'border-amber-400 bg-amber-50 dark:bg-amber-950/40 text-amber-600 dark:text-amber-400'
@@ -68,6 +70,8 @@ export function EffectHeader({ effect }) {
           <button
             type="button"
             onClick={() => toggleMastered(effect.id)}
+            aria-label={mastered ? '익힘 상태 변경' : '익힘 완료로 표시'}
+            title={mastered ? '익힘 상태 변경' : '익힘 완료로 표시'}
             className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg border text-xs font-medium transition-all ${
               mastered
                 ? 'border-emerald-500 bg-emerald-50 dark:bg-emerald-950/40 text-emerald-600 dark:text-emerald-400'

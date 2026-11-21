@@ -40,6 +40,7 @@ export function XrayBadge({ id, label, description }) {
         }}
         aria-expanded={isOpen}
         aria-label={`X-ray 원리 ${formattedId}: ${title}`}
+        title={`X-ray 원리 ${formattedId}: ${title}`}
         className="inline-flex items-center justify-center min-w-[24px] h-[24px] px-1.5 text-[11px] font-bold tabular-nums rounded-full border-2 border-dashed border-[var(--color-focus)] bg-[var(--color-surface)] text-[var(--color-focus)] hover:bg-[var(--color-focus)] hover:text-white transition-colors cursor-pointer shadow-[var(--shadow-1)] focus-visible:outline-2 focus-visible:outline-[var(--color-focus)]"
       >
         {formattedId}
@@ -60,6 +61,7 @@ export function XrayBadge({ id, label, description }) {
               onClick={() => setIsOpen(false)}
               className="text-[var(--color-ink-muted)] hover:text-[var(--color-ink)] p-1 rounded"
               aria-label="닫기"
+              title="닫기"
             >
               ✕
             </button>

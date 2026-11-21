@@ -107,6 +107,7 @@ export function Dialog({
             type="button"
             onClick={onClose}
             aria-label="닫기"
+            title="닫기"
             className="min-w-[44px] min-h-[44px] inline-flex items-center justify-center rounded-[var(--radius-md)] text-[var(--color-ink-muted)] hover:text-[var(--color-ink)] hover:bg-[var(--color-bg)] transition-colors cursor-pointer focus-visible:outline-2 focus-visible:outline-[var(--color-focus)] ml-auto"
           >
             ✕

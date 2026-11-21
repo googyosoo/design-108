@@ -61,6 +61,7 @@ export function PhotosensitivityWarning() {
           onClick={handleDismiss}
           className="rounded-lg p-1 text-amber-700 dark:text-amber-400 hover:bg-amber-100 dark:hover:bg-amber-900/40 transition-colors"
           aria-label="안내 닫기"
+          title="안내 닫기"
         >
           <X className="h-4 w-4" />
         </button>
